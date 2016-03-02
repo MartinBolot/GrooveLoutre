@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!--<link rel="icon" href="../favicon.ico" type="image/x-icon">-->
+        <link rel="icon" href="/images/play.png" type="image/x-icon">
+    
+        <!--   styles     -->
+        <link rel="stylesheet" href="/stylesheets/bootstrap/css/bootstrap.css"/>
+        <link rel='stylesheet' href='/stylesheets/style.css'/>
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="global container">
+            <header>
+                <div class="row">
+                    <div class="col-lg-*">
+                        <h1><%= title %></h1>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <!-- container -->
+                    <!-- left queue + main selection -->
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-lg-2">
+                            <div class="row">
+                                <div class="col-lg-* leftSearchBox">
+                                    <form method="post" action="#">
+                                        <label for="leftSearchBoxText"></label>
+                                        <input id="leftSearchBoxText" type="text" class="form-control"/>
+                                        <input type="submit" class="btn btn-primary btn-sm form-control" value="Find"/>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-*">
+                                    queuedSong X
+                                </div>
+                            </div>
+                        </div>
+                        <!-- right column -->
+                        <div class="col-lg-8">
+                            <div class="row sorting_row">
+                                <div class="col-lg-2">Sort by</div>
+                                <div class="col-lg-2 sorting_row-artist">LP</div>
+                                <div class="col-lg-8 row">
+                                    <div class="col-lg-5 sorting_row-artist">Artist</div>
+                                    <div class="col-lg-5 sorting_row-name">Name</div>
+                                    <div class="col-lg-2 sorting_row-favourite">Favourite</div>
+                                </div>
+                            </div>
+                            <div class="songsList" id="globalRender">
+                                <!--  render ReactApp.js -->
+                            </div>
+                        </div>
+                        <!-- filter -->
+                        <div class="col-lg-2">
+                            <div class="row">
+                                <div class="col-lg-* filterBox">
+                                    <form method="post" action="#">
+                                        <label for="filterBoxText"></label>
+                                        <input id="filterBoxText" type="text" class="form-control"/>
+                                        <input type="submit" class="btn btn-primary btn-sm form-control" value="Filter"/>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fixed bottom -->
+                    <div class="row">
+                        
+                    </div>
+                </div>
+            </main>
+            <footer>
+            </footer>
+        </div>
+        
+        <!--   scripts     -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="/stylesheets/bootstrap/js/bootstrap.js"></script>
+        <script src="./javascripts/build/app.js"></script>
+    </body>
+</html>
