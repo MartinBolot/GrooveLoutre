@@ -1,8 +1,3 @@
-const ReactDOM = require('react-dom');
-const SongList = require('./components/SongList.jsx');
-
-console.log(test);
-
 /* ReactDOM.render(
     SongList,
     document.getElementById('globalRender')
@@ -91,10 +86,12 @@ const rootRoute = {
   </Provider>,
   document.getElementById('app')
 );*/
+import ReactDOM from 'react-dom';
+import SongList from './components/SongList';
 
 ReactDOM.render(
     SongList,
-    document.getElementById('globalRender')
+    document.getElementById('app')
 );
 
 // Install ServiceWorker and AppCache in the end since
