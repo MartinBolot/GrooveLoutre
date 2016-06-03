@@ -1,4 +1,4 @@
-var React = require('react'),
+var React = require('react');
     Song = require('./components/song.jsx'),
     songsData = require('../../data/localstorage.js');
 

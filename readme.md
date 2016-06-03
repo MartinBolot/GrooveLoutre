@@ -3,6 +3,6 @@
 In order to run current version :
 ```
 npm install
-node ./bin/www
+npm start
 ```
 Then go to http://localhost:3000/

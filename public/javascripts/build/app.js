@@ -22118,7 +22118,7 @@ var SongList = React.createClass({displayName: "SongList",
             data: function(){
                 var songArray=[],
                     songs=songsData['songs'];
-                
+
                 for (var i in songs){
                     if (songs.hasOwnProperty(i)){
                         songArray.push(songs[i]);
@@ -22153,6 +22153,7 @@ var SongList = React.createClass({displayName: "SongList",
                     return(
                         React.createElement("div", {className: "songItem row"}, 
                             React.createElement("div", {className: "col-lg-2 songsList_row-play"}, 
+                                React.createElement("span", {className: "remove"}, "X"), 
                                 React.createElement("span", {className: "play"})
                             ), 
                             React.createElement("div", {className: "col-lg-2 songsList_row-disc"}, 
@@ -22177,6 +22178,7 @@ var SongList = React.createClass({displayName: "SongList",
 });
 
 module.exports = React.createElement(SongList);
+
 
 },{"../../data/localstorage.js":2,"./components/song.jsx":160,"react":158}],160:[function(require,module,exports){
 var React = require('react');
