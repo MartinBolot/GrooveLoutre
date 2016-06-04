@@ -6,8 +6,8 @@
     "type": "url",
     "url": "https://github.com/MartinBolot/GrooveLoutre.git"
   },
-  "engines" : {
-    "npm" : ">=3"
+  "engines": {
+    "npm": ">=3"
   },
   "author": "Martin BOLOT",
   "license": "MIT",
@@ -53,7 +53,9 @@
     ],
     "env": {
       "production": {
-        "only": ["app"],
+        "only": [
+          "app"
+        ],
         "plugins": [
           "transform-react-remove-prop-types",
           "transform-react-constant-elements",
@@ -84,16 +86,34 @@
     },
     "rules": {
       "import/no-unresolved": 2,
-      "comma-dangle": [2, "always-multiline"],
-      "indent": [2, 4, { "SwitchCase": 1 }],
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "indent": [
+        2,
+        4,
+        {
+          "SwitchCase": 1
+        }
+      ],
       "no-console": 1,
       "max-len": 0,
       "prefer-template": 2,
       "no-use-before-define": 0,
       "newline-per-chained-call": 0,
-      "arrow-body-style": [2, "as-needed"],
-      "react/jsx-indent":[2,4],
-      "react/jsx-indent-props":[2,4],
+      "arrow-body-style": [
+        2,
+        "as-needed"
+      ],
+      "react/jsx-indent": [
+        2,
+        4
+      ],
+      "react/jsx-indent-props": [
+        2,
+        4
+      ],
       "jsx-a11y/href-no-hash": 2,
       "jsx-a11y/label-has-for": 2,
       "jsx-a11y/mouse-events-have-key-events": 2,
@@ -130,9 +150,14 @@
       "color-hex-case": "upper",
       "string-quotes": "single",
       "font-family-name-quotes": "always-where-recommended",
-      "selector-pseudo-class-no-unknown": [true, {
-        "ignorePseudoClasses": ["global"]
-      }],
+      "selector-pseudo-class-no-unknown": [
+        true,
+        {
+          "ignorePseudoClasses": [
+            "global"
+          ]
+        }
+      ],
       "indentation": 2
     }
   },
@@ -171,6 +196,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
+    "bootstrap-webpack": "0.0.5",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.4.2",
     "cheerio": "^0.20.0",
@@ -196,6 +222,7 @@
     "ip": "^1.1.2",
     "isparta": "^4.0.0",
     "isparta-loader": "^2.0.0",
+    "jquery": "^2.2.4",
     "jscs": "^2.11.0",
     "json-loader": "^0.5.4",
     "karma": "^0.13.22",
@@ -208,6 +235,8 @@
     "karma-safari-launcher": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "lint-staged": "^0.2.1",
     "mocha": "^2.4.5",
     "ngrok": "2.1.8",

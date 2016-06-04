@@ -32,6 +32,9 @@ module.exports = (options) => ({
             include: /node_modules/,
             loaders: ['style-loader', 'css-loader'],
         }, {
+            test: /\.less$/,
+            loader: "style!css!less"
+        }, {
             test: /\.jpe?g$|\.gif$|\.png$|\.svg$/i,
             loader: 'url-loader?limit=10000',
         }, {
@@ -52,13 +55,16 @@ module.exports = (options) => ({
         }, {
             test: /\.json$/,
             loader: 'json-loader',
-        }],
+        },
+    ],
     },
     plugins: options.plugins.concat([
         new webpack.optimize.CommonsChunkPlugin('common.js'),
         new webpack.ProvidePlugin({
             // make fetch available
             fetch: 'exports?self.fetch!whatwg-fetch',
+            $: "jquery",
+            jQuery: "jquery",
         }),
 
     // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`

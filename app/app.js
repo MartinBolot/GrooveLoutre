@@ -18,20 +18,26 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { applyRouterMiddleware, Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-// import FontFaceObserver from 'fontfaceobserver';
 import useScroll from 'react-router-scroll';*/
 // import configureStore from './store';
 
+import FontFaceObserver from 'fontfaceobserver';
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
-// import styles from 'containers/App/styles.css';
-/* const openSansObserver = new FontFaceObserver('Open Sans', {});
+import styles from './style.less';
+// import bootstrap from '../public/stylesheets/bootstrap/css/bootstrap.css';
+// import bootstrapJs from '../public/stylesheets/bootstrap/js/bootstrap.min.js';
+
+/*
+const openSansObserver = new FontFaceObserver('Open Sans', {});
 
 // When Open Sans is loaded, add a font-family using Open Sans to the body
 openSansObserver.check().then(() => {
   document.body.classList.add(styles.fontLoaded);
+  document.body.classList.add(bootstrap.fontLoaded);
 }, () => {
   document.body.classList.remove(styles.fontLoaded);
+  document.body.classList.remove(bootstrap.fontLoaded);
 });*/
 
 // Create redux store with history
