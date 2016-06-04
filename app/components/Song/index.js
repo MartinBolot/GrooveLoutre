@@ -19,7 +19,7 @@ function SongList(props) {
 SongList.propTypes = {
     artist: React.PropTypes.string.isRequired,
     name: React.PropTypes.string.isRequired,
-    favourite: React.PropTypes.boolean,
+    favourite: React.PropTypes.bool,
 };
 
 module.exports = SongList;

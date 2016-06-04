@@ -39,7 +39,7 @@ class SongList extends React.Component {
         return (
             <div className="songList">
                 {this.state.data().map((song, i) => (
-                    <div className="songItem row">
+                    <div className="songItem row" key={i}>
                         <div className="col-lg-2 songsList_row-play">
                             <span className="remove">X</span>
                             <span className="play"></span>
@@ -55,7 +55,8 @@ class SongList extends React.Component {
                             key={i}
                             name={song.J}
                             artist={song.D}
-                            favourite={song.favourite}
+                            // favourite={song.favourite}
+                            favourite={false}
                         />
                     </div>
                     )
