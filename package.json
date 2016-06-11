@@ -29,7 +29,7 @@
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "npm run lint:eslint && npm run lint:jscs",
     "lint:js:staged": "npm run lint:eslint:staged && npm run lint:jscs:staged",
-    "lint:eslint": "eslint . --ignore-path .gitignore",
+    "lint:eslint": "eslint ./app/ --quiet",
     "lint:eslint:staged": "eslint-staged",
     "lint:jscs": "jscs .",
     "lint:jscs:staged": "jscs-staged",
@@ -91,7 +91,7 @@
         "always-multiline"
       ],
       "indent": [
-        2,
+        1,
         4,
         {
           "SwitchCase": 1
@@ -107,11 +107,11 @@
         "as-needed"
       ],
       "react/jsx-indent": [
-        2,
+        1,
         4
       ],
       "react/jsx-indent-props": [
-        2,
+        1,
         4
       ],
       "jsx-a11y/href-no-hash": 2,

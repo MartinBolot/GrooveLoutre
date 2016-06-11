@@ -1,0 +1,6 @@
+_old/*
+data/*
+public/*
+app/_example/*
+.gitignore
+node_modules/

@@ -9,8 +9,8 @@ function SongList(props) {
             <div className="col-lg-5">
                 {props.name}
             </div>
-            <div className="col-lg-2">
-                {props.favourite}
+            <div className="col-lg-2 favourite">
+                {props.favourite ? '*' : ''}
             </div>
         </div>
     );

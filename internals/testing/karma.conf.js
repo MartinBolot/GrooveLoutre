@@ -16,12 +16,18 @@ module.exports = (config) => {
     singleRun: true,
 
     files: [
-      {
-        pattern: './test-bundler.js',
-        watched: false,
-        served: true,
-        included: true,
-      },
+        {
+            pattern: './test-bundler.js',
+            watched: false,
+            served: true,
+            included: true,
+        },
+        {
+            pattern: 'data/*',
+            watched: false,
+            served: false,
+            included: false,
+        },
     ],
 
     preprocessors: {

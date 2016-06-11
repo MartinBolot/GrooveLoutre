@@ -1,9 +1,3 @@
-/* ReactDOM.render(
-    SongList,
-    document.getElementById('globalRender')
-);*/
-
-
 // Needed for redux-saga es6 generator support
 import 'babel-polyfill';
 
@@ -21,12 +15,11 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import useScroll from 'react-router-scroll';*/
 // import configureStore from './store';
 
-import FontFaceObserver from 'fontfaceobserver';
+// import FontFaceObserver from 'fontfaceobserver';
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
-import styles from './style.less';
-// import bootstrap from '../public/stylesheets/bootstrap/css/bootstrap.css';
-// import bootstrapJs from '../public/stylesheets/bootstrap/js/bootstrap.min.js';
+import './style.less';
+import '../public/stylesheets/bootstrap/css/bootstrap.less';
 
 /*
 const openSansObserver = new FontFaceObserver('Open Sans', {});
