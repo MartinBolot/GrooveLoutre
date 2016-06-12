@@ -9,7 +9,7 @@ var SongList = React.createClass({
             data: function(){
                 var songArray=[],
                     songs=songsData['songs'];
-                
+
                 for (var i in songs){
                     if (songs.hasOwnProperty(i)){
                         songArray.push(songs[i]);
@@ -44,6 +44,7 @@ var SongList = React.createClass({
                     return(
                         <div className="songItem row">
                             <div className="col-lg-2 songsList_row-play">
+                                <span className="remove">X</span>
                                 <span className="play"></span>
                             </div>
                             <div className="col-lg-2 songsList_row-disc">
