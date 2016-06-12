@@ -1,19 +1,35 @@
 const React = require('react');
+import { Link } from 'react-router';
 
-function SongList(props) {
-    return (
-        <div className="song row col-lg-8">
-            <div className="col-lg-5">
-                {props.artist}
+class SongList extends React.Component {
+    /* constructor() {
+        super();
+    }*/
+    getArtist() {
+        let artist;
+        if (this.props.artist === 'AC/DC') {
+            // artist = <a href="#acdc">AC/DC</a>;
+            artist = <Link to="acdc">AC/DC</Link>;
+        } else {
+            artist = this.props.artist;
+        }
+        return artist;
+    }
+    render() {
+        return (
+            <div className="song row col-lg-8">
+                <div className="col-lg-5">
+                    {this.getArtist()}
+                </div>
+                <div className="col-lg-5">
+                    {this.props.name}
+                </div>
+                <div className="col-lg-2 favourite">
+                    {this.props.favourite ? '*' : ''}
+                </div>
             </div>
-            <div className="col-lg-5">
-                {props.name}
-            </div>
-            <div className="col-lg-2 favourite">
-                {props.favourite ? '*' : ''}
-            </div>
-        </div>
-    );
+        );
+    }
 }
 
 SongList.propTypes = {

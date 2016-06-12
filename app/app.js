@@ -85,11 +85,20 @@ const rootRoute = {
   </Provider>,
   document.getElementById('app')
 );*/
+
+import React from 'react';
 import ReactDOM from 'react-dom';
 import SongList from './components/SongList';
+import Artist from './components/Artist';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 ReactDOM.render(
-    SongList,
+    <Router history={hashHistory}>
+        <Route path="/" component={SongList}>
+            <IndexRoute component={SongList} />
+        </Route>
+        <Route path="acdc" component={Artist} />
+    </Router>,
     document.getElementById('app')
 );
 

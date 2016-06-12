@@ -55,7 +55,6 @@ class SongList extends React.Component {
                             key={i}
                             name={song.J}
                             artist={song.D}
-                            // favourite={song.favourite}
                             favourite={false}
                         />
                     </div>
@@ -66,4 +65,4 @@ class SongList extends React.Component {
     }
 }
 
-module.exports = React.createElement(SongList);
+module.exports = SongList;
