@@ -34,8 +34,12 @@ class SongStore extends EventEmitter {
             });
         })();
     }
-    removeSong(id) {
-        this.songs.splice(id, 1);
+    removeSong(action) {
+        /* alternative
+        // this.songs.splice(action.id, 1);
+        */
+        const newSongArray = this.songs.filter((item, index) => index !== action.id);
+        this.songs = newSongArray;
         this.emit('change');
     }
     getAll() {
