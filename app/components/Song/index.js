@@ -6,14 +6,8 @@ class SongList extends React.Component {
         super();
     }*/
     getArtist() {
-        let artist;
-        if (this.props.artist === 'AC/DC') {
-            // artist = <a href="#acdc">AC/DC</a>;
-            artist = <Link to="acdc">AC/DC</Link>;
-        } else {
-            artist = this.props.artist;
-        }
-        return artist;
+        const artistRoute = `artist/${this.props.artist.replace('/', '-')}`;
+        return <Link to={artistRoute}>{this.props.artist}</Link>;
     }
     render() {
         return (

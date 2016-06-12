@@ -88,16 +88,18 @@ const rootRoute = {
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+
+import Layout from './components/Layout/';
 import SongList from './components/SongList';
 import Artist from './components/Artist';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 ReactDOM.render(
     <Router history={hashHistory}>
-        <Route path="/" component={SongList}>
+        <Route path="/" component={Layout}>
             <IndexRoute component={SongList} />
+            <Route path="artist/:artist" component={Artist} />
         </Route>
-        <Route path="acdc" component={Artist} />
     </Router>,
     document.getElementById('app')
 );

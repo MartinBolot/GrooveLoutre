@@ -10,12 +10,17 @@ const React = require('react');
     }
 }*/
 
-function Artist() {
+function Artist(props) {
+    const { params } = props;
     return (
         <div className="Artist">
-            toto
+            Artist : {params.artist}
         </div>
     );
 }
+
+Artist.propTypes = {
+    params: React.PropTypes.object.isRequired,
+};
 
 export default Artist;
