@@ -9,17 +9,22 @@ export default class SongList extends React.Component {
         this.state = {
             songs: songStore.getAll(),
         };
+        this.setSongs = this.setSongs.bind(this);
     }
     componentWillMount() {
-        songStore.on('change', () => {
-            this.setState({
-                songs: songStore.getAll(),
-            });
+        songStore.on('change', this.setSongs);
+    }
+    componentWillUnmount() {
+        songStore.removeListener('change', this.setSongs);
+    }
+    setSongs() {
+        this.setState({
+            songs: songStore.getAll(),
         });
     }
     render() {
         const { songs } = this.state;
-        const list = songs.data().map((song, i) => (
+        const list = songs.map((song, i) => (
             <Song
                 key={i}
                 songKey={i}
